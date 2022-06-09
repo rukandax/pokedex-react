@@ -9,7 +9,7 @@ import getPokemonDetail from "../../utils/get-pokemon-detail";
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(false);
 
-  const [pokemons, setPokemons] = useState([]);
+  const [pokemons, setPokemons] = useState([]); // eslint-disable-line
   const [pokemonDetails, setPokemonDetail] = useState([]);
 
   const [nextListUrl, setNextListUrl] = useState(
