@@ -34,7 +34,7 @@ export default function DetailPage() {
     <div className="container p-10">
       <div className="flex justify-start pb-5 mb-5 border-b">
         <div className="mr-10">
-          <PokemonImage pokemon={pokemon} />
+          {pokemon && <PokemonImage pokemon={pokemon} />}
         </div>
         <div>
           <div className="text-sm text-slate-500">Pokemon Name</div>
