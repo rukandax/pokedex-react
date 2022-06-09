@@ -74,6 +74,7 @@ export default function PokemonImage(props) {
         }
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isFrontSprite, isFemaleSprite, isShinySprite]);
 
   useEffect(() => {
