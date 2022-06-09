@@ -1,0 +1,10 @@
+.detail-title {
+  &::before {
+    display: inline-block;
+    content: "";
+    border-top: 2px solid black;
+    width: 30px;
+    margin: 0 15px -10px 0;
+    transform: translateY(-1rem);
+  }
+}

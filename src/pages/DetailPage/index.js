@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
+import "./style.scss";
+
 import PokemonImage from "../../components/PokemonImage";
 
 import getPokemonDetail from "../../utils/get-pokemon-detail";
@@ -64,6 +67,27 @@ export default function DetailPage() {
               </div>
             );
           })}
+      </div>
+      <div className="mt-5 pt-5 border-t">
+        <div className="detail-title text-2xl mb-5">Items</div>
+        <div className="grid grid-cols-2 gap-5">
+          {pokemon.held_items?.length ? (
+            pokemon.held_items.map((item) => {
+              return (
+                <div
+                  key={item.item.url}
+                  className="border rounded p-2 uppercase text-center text-xs"
+                >
+                  {item.item.name}
+                </div>
+              );
+            })
+          ) : (
+            <div className="col-span-2 text-center border rounded">
+              This Pokemon doesn't held any item
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
