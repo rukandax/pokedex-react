@@ -27,6 +27,7 @@ export default function DetailPage() {
 
   useEffect(() => {
     getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadingRender = <div className="container p-10">Loading Data...</div>;
