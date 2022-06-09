@@ -84,6 +84,7 @@ export default function PokemonImage(props) {
     if (props?.pokemon?.sprites?.front_shiny) {
       setIsShinySpriteExist(true);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
