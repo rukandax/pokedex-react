@@ -70,20 +70,25 @@ export default function DetailPage() {
       </div>
       <div className="mt-5 pt-5 border-t">
         <div className="detail-title text-2xl mb-5">Items</div>
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-3 gap-5">
           {pokemon.held_items?.length ? (
             pokemon.held_items.map((item) => {
               return (
                 <div
                   key={item.item.url}
-                  className="border rounded p-2 uppercase text-center text-xs"
+                  className="border rounded p-1 uppercase text-center text-xs"
                 >
+                  <img
+                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/${item.item.name}.png`}
+                    alt={item.item.name}
+                    className="m-auto mb-2"
+                  />
                   {item.item.name}
                 </div>
               );
             })
           ) : (
-            <div className="col-span-2 text-center border rounded">
+            <div className="col-span-3 text-center border rounded">
               This Pokemon doesn't held any item
             </div>
           )}
