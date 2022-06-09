@@ -55,22 +55,22 @@ export default function PokemonImage(props) {
   useEffect(() => {
     if (isFrontSprite) {
       if (isFemaleSprite) {
-        setDisplayedSprite(props.pokemon.sprites.front_female);
+        setDisplayedSprite(props?.pokemon?.sprites?.front_female || "");
       } else {
         if (isShinySprite) {
-          setDisplayedSprite(props.pokemon.sprites.front_shiny);
+          setDisplayedSprite(props?.pokemon?.sprites?.front_shiny || "");
         } else {
-          setDisplayedSprite(props.pokemon.sprites.front_default);
+          setDisplayedSprite(props?.pokemon?.sprites?.front_default || "");
         }
       }
     } else {
       if (isFemaleSprite) {
-        setDisplayedSprite(props.pokemon.sprites.back_female);
+        setDisplayedSprite(props?.pokemon?.sprites?.back_female || "");
       } else {
         if (isShinySprite) {
-          setDisplayedSprite(props.pokemon.sprites.back_shiny);
+          setDisplayedSprite(props?.pokemon?.sprites?.back_shiny || "");
         } else {
-          setDisplayedSprite(props.pokemon.sprites.back_default);
+          setDisplayedSprite(props?.pokemon?.sprites?.back_default || "");
         }
       }
     }
