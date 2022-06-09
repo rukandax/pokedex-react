@@ -77,16 +77,14 @@ export default function PokemonImage(props) {
   }, [isFrontSprite, isFemaleSprite, isShinySprite]);
 
   useEffect(() => {
-    if (props.pokemon.sprites.front_female) {
+    if (props?.pokemon?.sprites?.front_female) {
       setIsFemaleSpriteExist(true);
     }
-  }, [props.pokemon.sprites.front_female]);
 
-  useEffect(() => {
-    if (props.pokemon.sprites.front_shiny) {
+    if (props?.pokemon?.sprites?.front_shiny) {
       setIsShinySpriteExist(true);
     }
-  }, [props.pokemon.sprites.front_shiny]);
+  }, []);
 
   return (
     <div className="flex justify-center mb-2">
